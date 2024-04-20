@@ -99,12 +99,15 @@ class HotelApp:
         tk.Button(root, text="Foglalás Hozzáadása", command=self.add_booking).pack()
         tk.Button(root, text="Foglalás Törlése", command=self.delete_booking).pack()
         tk.Button(root, text="Foglalások Listázása", command=self.list_bookings).pack()
+
         self.bookings_listbox = tk.Listbox(root)
         self.bookings_listbox.pack()
-        root.geometry("600x600")# szerintem elég ekkora ablak, web API-kat szoktam írni C# .NEt fejlesztő vagyok , úgyhogy nem vagyok jártas az ilyen megjelenítéses dolgokban sajnos
-                                # De gondoltam jobb mint a console-os, ha már csinálom :) Meg nyilván ezt lehetne tovább vinni, hogy külön mappák, melyben osztályok külön fájlokban stb, de nagyon sok a munkám és bízokbenne,
-                                # hogy most ez így elég lesz, ha gyorsan leszögelem ezt. Egyébként nyilván C# ban nagy alkalmazásoknál használok patterneket (repository, builder stb...)
-                                #Továbbá a commitok-ba  atest commit 4 -et elfelejtetem átírni, szóval az azért ismétlődik...
+        root.geometry("600x600")
+
+        # szerintem elég ekkora ablak, web API-kat szoktam írni C# .NEt fejlesztő vagyok , úgyhogy nem vagyok jártas az ilyen megjelenítéses dolgokban sajnos
+        # De gondoltam jobb mint a console-os, ha már csinálom :) Meg nyilván ezt lehetne tovább vinni, hogy külön mappák, melyben osztályok külön fájlokban stb, de nagyon sok a munkám és bízokbenne,
+        # hogy most ez így elég lesz, ha gyorsan leszögelem ezt. Egyébként nyilván C# ban nagy alkalmazásoknál használok patterneket (repository, builder stb...)
+        #Továbbá a commitok-ba  atest commit 4 -et elfelejtetem átírni, szóval az azért ismétlődik...
         self.list_bookings()
 
     def add_booking(self):
